@@ -1,0 +1,168 @@
+/* GLOBAL STYLES & TYPOGRAPHY */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding-top: 65px; /* PENTING: Tambahkan padding untuk menghindari header menutupi konten */
+    padding-bottom: 50px; /* PENTING: Tambahkan padding untuk menghindari footer menutupi konten */
+    background-color: #f0f2f5; 
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1, h2 {
+    color: #1a237e; /* Deep Indigo - Warna konsisten */
+}
+
+h2 {
+    border-bottom: 2px solid #e0e0e0;
+    padding-bottom: 10px;
+    margin-top: 0;
+}
+
+.explanation {
+    font-style: italic;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+/* =======================================================
+   HEADER (STICKY/FIXED)
+   ======================================================= */
+header {
+    background-color: #1a237e; /* Deep Indigo */
+    color: white;
+    padding: 15px 0;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Shadow lebih kuat */
+    
+    /* PROPERTI PENTING UNTUK STICKY HEADER */
+    position: fixed; /* Membuat header tetap di posisinya */
+    top: 0;          /* Menempatkannya di bagian atas */
+    width: 100%;     /* Memastikan lebarnya penuh */
+    z-index: 1000;   /* Memastikan header berada di atas konten lain saat scroll */
+}
+
+header h1 {
+    margin: 0;
+    color: white;
+}
+
+/* =======================================================
+   FOOTER 
+   ======================================================= */
+footer {
+    background-color: #e0e0e0;
+    color: #555;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 0.9em;
+    
+    /* PROPERTI UNTUK FIXED FOOTER (Opsional, tapi bagus untuk konsistensi) */
+    position: fixed; /* Membuat footer tetap di posisinya */
+    bottom: 0;       /* Menempatkannya di bagian bawah */
+    width: 100%;     /* Memastikan lebarnya penuh */
+    z-index: 1000;   /* Memastikan footer berada di atas konten lain */
+    
+    /* PENTING: Tambahkan margin-top 0 agar tidak mengganggu tata letak fixed */
+    margin-top: 0;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+/* CHART CONTAINERS (Sisanya tetap sama) */
+.chart-container {
+    background-color: #fff;
+    padding: 25px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.chart-wrapper {
+    position: relative;
+    height: 450px; 
+    width: 100%;
+    margin-top: 20px;
+}
+
+/* SUMMARY & METADATA */
+.summary {
+    background-color: #e3f2fd; 
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    border-left: 5px solid #1a237e;
+}
+
+.metadata {
+    font-weight: bold;
+    margin-top: 15px;
+    padding-top: 10px;
+    border-top: 1px dashed #ccc;
+}
+
+/* FILTER & BUTTON STYLES */
+#yearFilter, .back-button {
+    padding: 8px 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+.back-button {
+    background-color: #ff6f00; 
+    color: white;
+    border: none;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+.back-button:hover {
+    background-color: #e65100;
+}
+
+/* LOADING STATE STYLING */
+#loading-state {
+    text-align: center;
+    padding: 100px 0;
+    color: #1a237e;
+}
+
+.loader {
+    border: 8px solid #f3f3f3;
+    border-top: 8px solid #1a237e;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: spin 1s linear infinite;
+    margin: 0 auto 20px auto;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* RESPONSIVENESS */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+    .chart-wrapper {
+        height: 350px; 
+    }
+    header h1 {
+        font-size: 1.5em;
+    }
+    .chart-container {
+        padding: 15px;
+    }
+}

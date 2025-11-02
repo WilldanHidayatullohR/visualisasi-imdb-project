@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analisis Film IMDb Interaktif | Visualisasi Data</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+</head>
+<body>
+
+    <header>
+        <h1>🎬 Visualisasi Data Film IMDb Interaktif</h1>
+    </header>
+
+    <main class="container">
+        <div id="loading-state">
+            <div class="loader"></div>
+            <p>Memuat Data Film, Mohon Tunggu...</p>
+        </div>
+
+        <div id="content-area" style="display: none;">
+            
+            <section class="summary">
+                <h2>Ringkasan Eksekutif & Metadata</h2>
+                <p>Analisis ini menyajikan tiga perspektif interaktif mengenai tren dan kualitas film global. Temuan utama menunjukkan adanya korelasi positif antara durasi film yang lebih panjang dengan rating yang lebih tinggi, serta lonjakan signifikan pada volume rilis film pasca tahun 2000. Eksplorasi interaktif memungkinkan Anda menggali data lebih dalam.</p>
+                <p class="metadata">
+                    Total entri film yang dianalisis (setelah dibersihkan): <span id="data-count">...</span>
+                </p>
+            </section>
+
+            <div class="chart-container">
+                <h2>1. Rating Rata-rata per Genre (Interaktif: Filter & Drill-down)</h2>
+                <p class="explanation">Grafik ini menunjukkan rating rata-rata genre. Gunakan filter tahun untuk melihat tren waktu, dan **klik pada batang** genre mana pun untuk melihat **10 film teratas** genre tersebut (*Drill-down*).</p>
+                
+                <label for="yearFilter">Filter Tahun Mulai:</label>
+                <select id="yearFilter"></select>
+
+                <div class="chart-wrapper">
+                    <canvas id="barChart"></canvas>
+                </div>
+            </div>
+
+            <div class="chart-container">
+                <h2>2. Distribusi Rating vs. Durasi (Interaktif: Hover Detail)</h2>
+                <p class="explanation">Diagram sebar ini memetakan setiap film berdasarkan durasi dan rating. Film dengan rating sangat tinggi seringkali memiliki durasi signifikan. **Arahkan kursor (*hover*)** ke titik data untuk melihat Judul, Sutradara, dan Sinopsis.</p>
+                <div class="chart-wrapper">
+                    <canvas id="scatterChart"></canvas>
+                </div>
+            </div>
+
+            <div class="chart-container">
+                <h2>3. Tren Jumlah Film Dirilis per Tahun (Interaktif: Toggle Legend)</h2>
+                <p class="explanation">Grafik ini mengamati perkembangan produksi enam genre utama dari waktu ke waktu. Klik nama genre di bagian legenda (*legend*) untuk menyembunyikan atau menampilkan garis trennya.</p>
+                <div class="chart-wrapper">
+                    <canvas id="lineChart"></canvas>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+        <p>&copy; 2025 Proyek Visualisasi Data | Wildan Hidayatulloh 220660121125</p>
+        <p>Sumber Data: IMDb Movies Dataset (Melalui Kaggle)</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

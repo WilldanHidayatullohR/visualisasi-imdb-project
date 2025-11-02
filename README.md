@@ -29,13 +29,20 @@ Pengguna dapat berinteraksi dengan berbagai grafik untuk memahami tren dan insig
 ---
 
 ## 📈 Jenis Visualisasi
-Website ini menampilkan beberapa jenis visualisasi, antara lain:
-1. **Bar Chart** – Perbandingan rata-rata rating antar genre  
-2. **Line Chart** – Tren rating film dari waktu ke waktu  
-3. **Pie Chart** – Distribusi genre film  
-4. **Scatter Plot** – Hubungan antara jumlah votes dan rating  
-
-Setiap grafik dilengkapi fitur interaktif seperti *hover tooltip* dan *filter kategori*.
+Website ini menampilkan tiga jenis visualisasi utama yang menggambarkan tren dan hubungan dalam data film IMDb:
+- Grafik Batang (Bar Chart) – dengan Filter Tahun
+Menampilkan perbandingan jumlah film per genre berdasarkan tahun rilis.
+Pengguna dapat memilih tahun tertentu melalui fitur dropdown filter,
+sehingga dapat melihat genre apa yang paling dominan di periode tersebut.
+- Diagram Sebar (Scatter Plot)
+Menampilkan hubungan antara rating IMDb dan jumlah suara (votes) untuk tiap film.
+Setiap titik merepresentasikan satu film, dan tooltip interaktif menampilkan
+detail seperti judul, rating, jumlah votes, dan tahun rilis.
+Visualisasi ini membantu melihat pola apakah film populer cenderung mendapat rating tinggi.
+- Grafik Tren Jumlah Film Dirilis per Tahun (Line Chart Interaktif)
+Grafik ini menunjukkan perkembangan produksi film dari enam genre utama sepanjang waktu.
+Pengguna dapat mengklik nama genre pada bagian legend untuk menampilkan atau menyembunyikan garis trennya.
+Fitur ini memudahkan eksplorasi tren spesifik, seperti peningkatan genre tertentu di dekade tertentu.
 
 ---
 
@@ -56,11 +63,11 @@ Dihost menggunakan **GitHub Pages**, platform gratis untuk proyek web statis.
 ---
 
 ## 🧠 Insight Data
-Beberapa insight menarik dari dataset IMDb:
-- Genre **Drama** dan **Thriller** memiliki rating rata-rata tertinggi.  
-- Film dengan jumlah *votes* terbanyak umumnya merupakan film populer dari tahun 2000 ke atas.  
-- Terdapat tren peningkatan jumlah film setelah tahun 2010 dengan rating relatif stabil di kisaran 6–8.
-
+Beberapa insight menarik dari hasil visualisasi:
+- Produksi film cenderung meningkat setelah tahun 2000, dengan lonjakan pada genre Drama dan Comedy.
+- Genre Action dan Adventure menunjukkan pertumbuhan signifikan dalam dekade terakhir.
+- Film dengan jumlah votes lebih tinggi umumnya memiliki rating IMDb lebih stabil di atas rata-rata.
+- Tren tahunan memperlihatkan bahwa industri film terus berkembang dengan variasi genre yang dinamis.
 ---
 
 ## 🧑‍💻 Author
